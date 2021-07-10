@@ -1,5 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <div style="text-align: center;">
+    <body>
+    
+        <h2>wordcount 결과는 아래와 같습니다</h2>
+    
+        {{total}}<br><br>
+        {% for word, num in dic %} <!--아까 dic에서 키:값 으로 받은 친구를 word num으로 받아주고-->
+        {{word}} : {{num}} <br>
+        <!--키:값으로 나와보이게 해줘-->
+        {% endfor %}
+        <a href="{% url 'home' %}">홈으로 돌아가기</a>
+    </body>
+    </div>
+</html>
 
-    <h1>반갑습니다 {{userName}}님~</h1>
-
-</div>

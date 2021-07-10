@@ -5,14 +5,20 @@
 
     <title>Document</title>
 </head>
-<body>
-    <div style="text-align: center;">
-        <h1>사용자의 이름을 입력하시오</h1><br>
-        <form action="result">
-            <label for="nameInput">이름</label>
-            <input id="nameInput" name="name">
-            <input type="submit" value="제출">
+<body style="text-align: center;">
+
+        <h1>요건 wordcount앱이여</h1>
+
+        <a href="{% url 'about' %}">about으로 이동</h1>
+        <a href="{% url 'result' %}">result로 이동</a>
+        <br><br>
+
+        <form action="{% url 'result' %}" style="text-align: center; margin-left: 30px;">
+
+        <textarea name = "fulltext" cols="40" rows="10"></textarea>
+         <br>   <input type="submit" value="계산하기">
         </form>
+
     </div>
 </body>
 </html>
